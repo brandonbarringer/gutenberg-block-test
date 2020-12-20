@@ -1,4 +1,4 @@
-export default supports = {
+export default {
     anchor: true,
     align: false,
     alignWide: false,
@@ -8,7 +8,7 @@ export default supports = {
     defaultStylePicker: false,
     fontSize: false,
     html: false,
-    inserter: false,
+    inserter: true,
     lineHeight: false,
     multiple: true,
     reusable: true,

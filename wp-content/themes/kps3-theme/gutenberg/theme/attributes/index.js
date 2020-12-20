@@ -1,67 +1,97 @@
 export function title(selector = 'h1') {
   return {
-    type: 'string',
-    src: 'text',
-    selector
+    title: {
+      default: 'Your Title Here',
+      type: 'string',
+      src: 'text',
+      selector
+    }
   }
 }
 
 export function text(selector = 'p') {
   return {
-    type: 'string',
-    src: 'text',
-    selector
+    text: {
+      default: 'Place Your Text Here',
+      type: 'string',
+      src: 'text',
+      selector
+    }
   }
 }
 
 export function href() {
   return {
-    type: 'string',
-    source: attribute,
-    selector: 'a',
-    attribute: 'href'
+    href: {
+      default: '//example.com',
+      type: 'string',
+      source: 'attribute',
+      selector: 'a',
+      attribute: 'href'
+    }
   }
 }
 
 export function target() {
   return {
-    type: 'string',
-    source: attribute,
-    selector: 'a',
-    attribute: 'rel'
+    target: {
+      default: '_self',
+      type: 'string',
+      source: 'attribute',
+      selector: 'a',
+      attribute: 'rel'
+    }
   }
 }
 
 export function rel() {
   return {
-    type: 'string',
-    source: attribute,
-    selector: 'a',
-    attribute: 'target'
+    rel: {
+      default: '',
+      type: 'string',
+      source: 'attribute',
+      selector: 'a',
+      attribute: 'target'
+    }
   }
 }
 
-export function url() {
+export function src() {
   return {
-    type: 'string',
-    source: 'attribute',
-    selector: 'img',
-    attribute: 'src'
+    src: {
+      default: '//example.com',
+      type: 'string',
+      source: 'attribute',
+      selector: 'img',
+      attribute: 'src'
+      }
   }
 }
 
 export function content(selector = '.text-content') {
   return {
-    type: 'string',
-    source: 'html',
-    multiline: 'p',
-    selector
+    content: {
+      default: 'Place Your Content Here',
+      type: 'string',
+      source: 'html',
+      multiline: 'p',
+      selector
+    }
+  }
+}
+
+export function color() {
+  return {
+    title: {
+      default: 'red',
+      type: 'string',
+    }
   }
 }
 
 // aliases
 export function image() {
-  return url();
+  return src();
 }
 
 export function heading(selector) {

@@ -1,3 +1,3 @@
 import supports from 'theme/supports';
 
-export default supports = { ...supports }
+export default { ...supports }

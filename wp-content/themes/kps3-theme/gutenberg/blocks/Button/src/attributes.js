@@ -1,8 +1,8 @@
-import { text, href, target, rel } from 'theme/attributes';
+import { text, href, target, rel, color } from 'theme/attributes';
 
-export default attributes = {
+export default {
   ...text('a'),
   ...href(),
-  ...rel(),
-  ...target()
+  ...target(),
+  ...color()
 }

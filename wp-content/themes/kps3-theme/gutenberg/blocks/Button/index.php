@@ -1,7 +1,7 @@
 <?php
 
 function create_button_block() {
-  $dir = get_stylesheet_directory_uri() . '/gutenberg/blocks/Button';
+  $dir = get_stylesheet_directory_uri() . '/gutenberg/blocks/button';
   $dist_path = $dir . '/dist/';
 
   /*
@@ -12,7 +12,7 @@ function create_button_block() {
   wp_register_script(
     'kps3_button',
     $script,
-    ['wp-blocks', 'wp-element', 'wp-i18n', 'wp-polyfill'],
+    ['wp-block-editor', 'wp-components'],
     1
   );
 
@@ -32,7 +32,7 @@ function create_button_block() {
     1
   );
 
-  register_block_type('kps3/Button', [
+  register_block_type('kps3/button', [
     'editor_script' => 'kps3_button',
     'editor_style'  => 'kps3_button_editor',
     'style'         => 'kps3_button_style'

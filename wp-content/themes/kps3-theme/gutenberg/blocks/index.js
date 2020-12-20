@@ -1,3 +1,4 @@
-import './Button';
-import './Image';
+import './button';
+import './image';
+import './kps3';
 
