@@ -12,7 +12,7 @@ function create_button_block() {
   wp_register_script(
     'kps3_button',
     $script,
-    ['wp-block-editor', 'wp-components'],
+    ['wp-block-editor', 'wp-components', 'wp-element'],
     1
   );
 
