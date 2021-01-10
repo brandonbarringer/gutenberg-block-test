@@ -1,14 +1,15 @@
 const {
   RichText,
-  useBlockProps,
   InspectorControls,
-  BlockControls
+  BlockControls,
+  PanelColorSettings,
+  withColors,
 } = wp.blockEditor;
 
 const {
   PanelBody,
   PanelRow,
-  ColorPicker,
+  ColorPalette,
   TextControl,
   SelectControl,
   ToolbarButton,
@@ -25,7 +26,13 @@ export default class _Edit extends Component {
     super(props);
 
     this.state = {
-      editMode: true
+      editMode: true,
+      colors: [
+        { name: 'red', color: '#f00' },
+        { name: 'blue', color: '#00f' },
+        { name: 'white', color: '#fff' },
+        { name: 'black', color: '#000' },
+      ]
     }
   }
 
@@ -44,20 +51,33 @@ export default class _Edit extends Component {
     );
   }
 
+  getColorByName(value, colorArray) {
+    if (!value.includes('#')) return value;
+
+    return colorArray.find(({ color }) => {
+      return color === value
+    }).name
+  }
+
   getInspectorControls() {
     const { attributes, setAttributes } = this.props;
     const { href, target, color } = attributes;
 
     return (
       <InspectorControls>
-        <PanelBody title="Button Settings" initialOpen={ true }>
+        <PanelBody title="Background Color" initialOpen={ false }>
           <PanelRow>
-            <ColorPicker
-              color={ color }
-              onChangeComplete={ (value) => setAttributes({ color: value.hex }) }
-              disableAlpha
+            <ColorPalette
+              colors={ this.state.colors }
+              disableCustomColors={ true }
+              value={ color }
+              onChange={ ( value ) => setAttributes({
+                color: this.getColorByName(value, this.state.colors)
+              }) }
             />
           </PanelRow>
+        </PanelBody>
+        <PanelBody title="Link Settings" initialOpen={ false }>
           <PanelRow>
             <TextControl
               label="Button URL"
@@ -83,18 +103,22 @@ export default class _Edit extends Component {
 
   render() {
     const { attributes, setAttributes } = this.props;
-    const { text } = attributes;
+    const { text, color } = attributes;
+    const NS = 'button';
+    const colorName = `${NS}--${this.getColorByName(color, this.state.colors)}`
+    const classes = `${NS} ${colorName}`;
 
     return ([
       this.getInspectorControls(),
       this.getBlockControls(),
-      <a class="button">
+      <div className={ classes }>
         { this.state.editMode &&
           <Fragment>
             <RichText
-              tagName="span"
+              tagName="a"
               placeholder={ text.default }
               value={ text }
+              className="button__link"
               onChange={ (value) => setAttributes({ text: value }) }
             />
           </Fragment>
@@ -103,13 +127,15 @@ export default class _Edit extends Component {
           <Placeholder isColumnLayout={ true }>
             <Disabled>
               <RichText
-                tagName="span"
+                tagName="a"
+                className="button__link"
                 value={ text }
               />
             </Disabled>
           </Placeholder>
         }
-      </a>
+      </div>
     ]);
   }
 }
+

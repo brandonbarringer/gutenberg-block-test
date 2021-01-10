@@ -3,7 +3,7 @@ export default {
     align: false,
     alignWide: false,
     className: false,
-    color: true,
+    color: false,
     customClassName: false,
     defaultStylePicker: false,
     fontSize: false,

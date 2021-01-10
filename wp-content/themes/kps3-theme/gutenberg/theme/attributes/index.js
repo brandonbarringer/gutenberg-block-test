@@ -64,7 +64,7 @@ export function src() {
       source: 'attribute',
       selector: 'img',
       attribute: 'src'
-      }
+    }
   }
 }
 
@@ -80,10 +80,10 @@ export function content(selector = '.text-content') {
   }
 }
 
-export function color() {
+export function color(title = 'color', hex = '#000') {
   return {
-    title: {
-      default: 'red',
+    [title]: {
+      default: hex,
       type: 'string',
     }
   }

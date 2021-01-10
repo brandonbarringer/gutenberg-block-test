@@ -10,7 +10,6 @@ import supports from './supports.js';
 */
 
 // Assets
-// import style from './scss/index.scss';
 // import beard from './images/beard.png';
 
 const { registerBlockType } = wp.blocks;
@@ -25,6 +24,6 @@ registerBlockType('kps3/button', {
     icon: 'smiley',
     attributes,
     supports,
-    edit: _Edit,
+    edit: _Edit ,
     save,
 });
