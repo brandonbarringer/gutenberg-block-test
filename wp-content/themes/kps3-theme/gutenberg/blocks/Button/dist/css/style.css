@@ -1,5 +1,7 @@
 .button {
   display: inline-block;
-  background-color: var(--button-bg-color);
-  color: var(--button-color);
+}
+.button--black {
+  background-color: #000;
+  color: #fff;
 }

@@ -128,7 +128,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _edit_jsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./edit.jsx */ \"./blocks/button/src/edit.jsx\");\n/* harmony import */ var _save_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./save.jsx */ \"./blocks/button/src/save.jsx\");\n/* harmony import */ var _attributes_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./attributes.js */ \"./blocks/button/src/attributes.js\");\n/* harmony import */ var _supports_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./supports.js */ \"./blocks/button/src/supports.js\");\n// Includes\n\n\n\n\n/*\n * Mostly Created From a Tutorial\n * @see https://awhitepixel.com/blog/wordpress-gutenberg-create-custom-block-part-1-development-environment/\n*/\n// Assets\n// import beard from './images/beard.png';\n\nvar registerBlockType = wp.blocks.registerBlockType; // Components\n// import Image from 'blocks/Image';\n\nregisterBlockType('kps3/button', {\n  title: 'Kps3 Button',\n  description: 'A Fancy Button',\n  category: 'widgets',\n  icon: 'smiley',\n  attributes: _attributes_js__WEBPACK_IMPORTED_MODULE_2__.default,\n  supports: _supports_js__WEBPACK_IMPORTED_MODULE_3__.default,\n  edit: _edit_jsx__WEBPACK_IMPORTED_MODULE_0__.default,\n  save: _save_jsx__WEBPACK_IMPORTED_MODULE_1__.default\n});\n\n//# sourceURL=webpack://gutenberg/./blocks/button/src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _edit_jsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./edit.jsx */ \"./blocks/button/src/edit.jsx\");\n/* harmony import */ var _save_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./save.jsx */ \"./blocks/button/src/save.jsx\");\n/* harmony import */ var _attributes_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./attributes.js */ \"./blocks/button/src/attributes.js\");\n/* harmony import */ var _supports_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./supports.js */ \"./blocks/button/src/supports.js\");\n/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scss/index.scss */ \"./blocks/button/src/scss/index.scss\");\n// Includes\n\n\n\n\n\n/*\n * Mostly Created From a Tutorial\n * @see https://awhitepixel.com/blog/wordpress-gutenberg-create-custom-block-part-1-development-environment/\n*/\n// Assets\n// import beard from './images/beard.png';\n\nvar registerBlockType = wp.blocks.registerBlockType; // Components\n// import Image from 'blocks/Image';\n\nregisterBlockType('kps3/button', {\n  title: 'Kps3 Button',\n  description: 'A Fancy Button',\n  category: 'widgets',\n  icon: 'smiley',\n  attributes: _attributes_js__WEBPACK_IMPORTED_MODULE_2__.default,\n  supports: _supports_js__WEBPACK_IMPORTED_MODULE_3__.default,\n  edit: _edit_jsx__WEBPACK_IMPORTED_MODULE_0__.default,\n  save: _save_jsx__WEBPACK_IMPORTED_MODULE_1__.default\n});\n\n//# sourceURL=webpack://gutenberg/./blocks/button/src/index.js?");
 
 /***/ }),
 
@@ -173,6 +173,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  anchor: true,\n  align: false,\n  alignWide: false,\n  className: false,\n  color: false,\n  customClassName: false,\n  defaultStylePicker: false,\n  fontSize: false,\n  html: false,\n  inserter: true,\n  lineHeight: false,\n  multiple: true,\n  reusable: true,\n  padding: true\n});\n\n//# sourceURL=webpack://gutenberg/./theme/supports/index.js?");
+
+/***/ }),
+
+/***/ "./blocks/button/src/scss/index.scss":
+/*!*******************************************!*\
+  !*** ./blocks/button/src/scss/index.scss ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://gutenberg/./blocks/button/src/scss/index.scss?");
 
 /***/ }),
 

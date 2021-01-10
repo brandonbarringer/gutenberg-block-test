@@ -3,6 +3,7 @@ import _Edit from './edit.jsx';
 import save from './save.jsx';
 import attributes from './attributes.js';
 import supports from './supports.js';
+import './scss/index.scss'
 
 /*
  * Mostly Created From a Tutorial
