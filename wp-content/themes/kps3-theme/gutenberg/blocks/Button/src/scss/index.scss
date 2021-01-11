@@ -1,8 +1,12 @@
-.button {
+.kps3-button {
   display: inline-block;
 
   &--black {
     background-color: #000;
     color: #fff;
+  }
+
+  &__link {
+    color: currentColor;
   }
 }

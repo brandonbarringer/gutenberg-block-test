@@ -1,7 +1,10 @@
-.button {
+.kps3-button {
   display: inline-block;
 }
-.button--black {
+.kps3-button--black {
   background-color: #000;
   color: #fff;
+}
+.kps3-button__link {
+  color: currentColor;
 }

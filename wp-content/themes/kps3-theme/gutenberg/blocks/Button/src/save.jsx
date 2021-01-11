@@ -3,7 +3,7 @@ const { RichText } = wp.blockEditor;
 export default function save(props) {
   const { attributes } = props;
   const { text, href, target, color } = attributes;
-  const NS = 'button';
+  const NS = 'kps3-button';
   const colorName = `${NS}--${color}`
   const classes = `${NS} ${colorName}`;
 
@@ -11,7 +11,7 @@ export default function save(props) {
       <div class={ classes }>
         <RichText.Content
           tagName="a"
-          className="button__link"
+          className="{ `${NS}__link` }"
           value={ text }
           href={ href }
           target={ target }

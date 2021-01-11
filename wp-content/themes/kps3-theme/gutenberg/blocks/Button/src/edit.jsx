@@ -104,9 +104,10 @@ export default class _Edit extends Component {
   render() {
     const { attributes, setAttributes } = this.props;
     const { text, color } = attributes;
-    const NS = 'button';
+    const NS = 'kps3-button';
     const colorName = `${NS}--${this.getColorByName(color, this.state.colors)}`
     const classes = `${NS} ${colorName}`;
+    const linkClass = `${NS}__link`;
 
     return ([
       this.getInspectorControls(),
@@ -118,7 +119,7 @@ export default class _Edit extends Component {
               tagName="a"
               placeholder={ text.default }
               value={ text }
-              className="button__link"
+              className={ linkClass }
               onChange={ (value) => setAttributes({ text: value }) }
             />
           </Fragment>
@@ -128,7 +129,7 @@ export default class _Edit extends Component {
             <Disabled>
               <RichText
                 tagName="a"
-                className="button__link"
+                className={ linkClass }
                 value={ text }
               />
             </Disabled>
